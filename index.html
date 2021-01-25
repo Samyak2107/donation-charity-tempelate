@@ -236,18 +236,18 @@
             <img src="./assets/contact.jpg" id="img__contact" class="img-fluid" style="max-height: 370px;">
           </div>
           <div class="col" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1500">
-            <form>
+            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeX6CMYKV1IXWTHKU8zhBKhKaWWfnvYzbtKE-rqnvQqjHK6cg/formResponse" method="POST" onsubmit="submitted=true">
               <div class="mb-3">
                 <label for="fullname" class="form-label">Full name</label>
-                <input type="text" class="form-control" id="fullform" aria-describedby="namehelp">
+                <input required type="text" class="form-control" id="fullform" aria-describedby="i2 i3"  jsname="YPqjbf">
               </div>
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input required type="email" class="form-control" id="exampleInputEmail1" aria-describedby="i6 i7">
               </div>
               <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea required class="form-control" id="exampleFormControlTextarea1" rows="3" aria-describedby="i10 i11"></textarea>
               </div>
               <button type="submit" class="btn btn-primary btn-formsubmit">Submit</button>
             </form>
@@ -273,6 +273,12 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script type="text/javascript">
+    var submitted = false;
+    if (submitted = true) {
+      alert("Your message has been sent successfully. Our executive will get back to you shortly.");
+    }
     </script>
 
     <!-- Optional JavaScript; choose one of the two! -->
