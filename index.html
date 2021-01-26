@@ -239,17 +239,17 @@
             <form name="Charity donation contact" id="form">
               <div class="mb-3">
                 <label for="fullname" class="form-label">Full name</label>
-                <input required name="full_name" type="text" class="form-control" id="fullform" aria-labelledby="i1" aria-describedby="i2 i3"  jsname="YPqjbf">
+                <input required name="full_name" type="text" class="form-control" id="full_name" aria-labelledby="i1" aria-describedby="i2 i3"  jsname="YPqjbf">
               </div>
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email</label>
-                <input required name="email" type="email" class="form-control" id="exampleInputEmail1" aria-labelledby="i5" aria-describedby="i6 i7">
+                <input required name="email" type="email" class="form-control" id="email" aria-labelledby="i5" aria-describedby="i6 i7">
               </div>
               <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                <textarea name="message" required class="form-control" id="exampleFormControlTextarea1" rows="3" aria-labelledby="i9" aria-describedby="i10 i11"></textarea>
+                <textarea name="message" required class="form-control" id="message" rows="3" aria-labelledby="i9" aria-describedby="i10 i11"></textarea>
               </div>
-              <button type="submit" id="form_submit" class="btn btn-primary btn-formsubmit">Submit</button>
+              <button type="submit" onsubmit="sendData()" id="form_submit" class="btn btn-primary btn-formsubmit">Submit</button>
             </form>
           </div>
         </div>
@@ -274,17 +274,7 @@
     <script>
       AOS.init();
     </script>
-    <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbygFhLEqFpYCwy_r38cDNYJRwYavd1LMk7zH_GsYq8EYGYbE4zCykszng/exec';
-      const form = document.getElementById('form');
     
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => console.log('Success!', response))
-          .catch(error => console.error('Error!', error.message))
-      })
-    </script>
     
 
     <!-- Optional JavaScript; choose one of the two! -->
